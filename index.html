@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image gallery</title>
+	<style type="text/css">
+		#main{
+			background-color: black;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.box{
+			width: 250px;
+			height: 250px;
+			padding: 5px;
+			margin: 5px;
+			font-size: 20px;
+			background-color: blue;
+			text-align: center;
+		}
+
+		#box1{
+			flex-grow: 1;
+			background-image: url("https://static.footballcounter.com/wp-content/uploads/2019/08/28174306/250px-Official_Indian_Super_League_logo.png");
+		}
+
+		#box2{
+			background-image: url("https://images.squarespace-cdn.com/content/v1/55115f04e4b0f4baa9ed963c/1570185120569-YB0QSPO3QZN05S6MU38N/ke17ZwdGBToddI8pDm48kODEHMGUBRgRRplOmqRomK1Zw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Rb66VC8y5UmDKESC3gpGyXuuE80dFkeX9PanWgM3V4qRJePadRz66WmX0L5eMAEew/Lely+250px+resize.png");
+			flex-grow: 1;			
+		}
+
+		#box3{
+			background-image: url("data:image/jpeg;base64,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");
+			flex-grow: 1;
+		}
+
+		#box4{
+			background-image: url("https://secure.gravatar.com/avatar/b7cbb245307bbb8b4c5499c99bdf42e6?s=250&d=mm&r=g");
+			flex-grow: 1;
+		}
+
+		#box5{
+			background-image: url("https://www.cchpr.landecon.cam.ac.uk/images/250-px-man-and-boy/image");
+			flex-grow: 1;
+		}
+
+		#box6{
+			background-image: url("https://www.burges-salmon.com/-/media/images/profile-images/simon-tilling.jpg?h=250&la=en&mw=250&w=250&hash=26DE717A38212883F0F8AC66A11DD3565417B5E6");
+			flex-grow: 1;
+		}
+
+		#box7{
+			background-image: url("https://jobs.socialsamosa.com/wp-content/uploads/2018/07/250px-Joshtalks.jpg");
+			flex-grow: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div class="box" id="box1">1</div>
+		<div class="box" id="box2">1</div>
+		<div class="box" id="box3">1</div>
+		<div class="box" id="box4">1</div>
+		<div class="box" id="box5">1</div>
+		<div class="box" id="box6">1</div>
+		<div class="box" id="box7">1</div>
+	</div>
+
+</body>
+</html>
